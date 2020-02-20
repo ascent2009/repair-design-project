@@ -12,8 +12,8 @@
 
 <body>
     <header class="header">
-        <div class="header-container">
-            <div class="header-container-top">
+        <div class="container">
+            <div class="container-top">
                 <div class="logo">IC "Repair Design Project"</div>
                 <nav class="navigation">
                     <ul class="navigation-list">
@@ -126,7 +126,7 @@
             </div>
         </section>
         <section class="form">
-            <form class="form-wrap" action="https://www.google.com/search?" method="GET">
+            <form class="form-wrap" action="" method="POST">
                 <div class="form-fields">
                     <div class="input">
                         <label class="label" for="name">Name</label>
@@ -168,7 +168,7 @@
                                 <li class="type-list__item">Replacing sockets and switches</li>
                                 <li class="type-list__item">Replacing doors</li>
                             </ul>
-                            <button class="button">from 900 rub / m2</button>
+                            <div class="type-price">from 900 rub / m2</div>
                         </div>
                     </div>
                     <div class="type overhaul">
@@ -184,7 +184,7 @@
                                 <li class="type-list__item">Replacing sockets and switches</li>
                                 <li class="type-list__item">Replacing doors</li>
                             </ul>
-                            <button class="button">from 1800 rub / m2</button>
+                            <div class="type-price">from 1800 rub / m2</div>
                         </div>
                     </div>
                     <div class="type designer">
@@ -200,16 +200,240 @@
                                 <li class="type-list__item">Replacing sockets and switches</li>
                                 <li class="type-list__item">Replacing doors</li>
                             </ul>
-                            <button class="button">from 4000 rub / m2</button>
+                            <div class="type-price">from 4000 rub / m2</div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </section>
-    </main>
-    <footer class="">
+        <section class="order">
+            <div class="order-container">
+                <div class="order-features-wrap">
+                    <div class="features">
+                        <div class="features-text-wrap">
+                            <div class="feature-item">
+                                <div class="feature-number">01</div>
+                                <p class="feature-text">Our specialist will arrive for measurements per day
+                                    contact, or appoint a date convenient for you</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-number">02</div>
+                                <p class="feature-text">Free metering</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-number">03</div>
+                                <p class="feature-text">Free consultation</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-number">04</div>
+                                <p class="feature-text">Get a cost estimate and
+                                    the timing of your future repairs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-form">
+                    <form action="" method="POST">
+                        <div class="order-form-title">
+                            Leave a request for free
+                            departure of the measurer
+                        </div>
+                        <div class="order-form-input">
+                            <label class="order-label" for="name">Name</label>
+                            <input type="text" class="order-form-name" id="name" placeholder="What is your name:">
+                            <label class="order-label" for="phone">Phone</label>
+                            <input type="text" class="order-form-phone" id="phone" placeholder="Your phone number:">
+                            <label class="order-label" for="email">Email</label>
+                            <input type="text" class="order-form-email" id="email" placeholder="Your email">
+                        </div>
+                        <div class="order-form-checkbox">
+                            <input type="checkbox" class="order-checkbox" id="order-checkbox">
+                            <label for="order-checkbox" class="order-label">I agree to the processing of personal
+                                data</label>
+                        </div>
+                        <div class="order-form-button">
+                            <button class="button">Call the measurer</button>
+                        </div>
+                    </form>
+                    <div class="order-form-overlay"></div>
+                </div>
+                <div class="order-discount">
+                    <div class="discount-image">
+                        <img src="./img/money-pig.svg" alt="Свинка-копилка">
+                    </div>
+                    <p class="discount-text">Help save 10 - 20% of the
+                        cost of materials</p>
+                </div>
+            </div>
+        </section>
+        <section class="clients-container">
+            <div class="clients-wrap">
+                <div class="clients-subtitle-wrap">
+                    <div class="clients-subtitle">
+                        <h2>our clients</h2>
+                    </div>
+                    <div class="clients-image-wrap">
+                        <img src="./img/Rectangle 6.7.svg" alt="Левая линия">
+                        <img src="./img/Group 43.svg" alt="Рукопожатие" class="tools">
+                        <img src="./img/Rectangle 6.8.svg" alt="Правая линия">
+                    </div>
+                    <div class="clients-subtitle-text">
+                        <p>80% of our customers recommend us to their
+                            friends and family.</p>
+                    </div>
+                </div>
+                <div class="clients-block">
+                    <div class="clents-review-wrap">
+                        <div class="client-info">
+                            <div class="client-photo">
+                                <img class="photo" src="./img/image 5.png" alt="Фото клиента">
+                            </div>
+                            <div class="client-name">Fedosova Maria Konstantinovna</div>
+                        </div>
+                        <div class="client-review">
+                            <p>I want to thank the guys for their work. We put your shower part in repair. I am
+                                verygrateful that i referred to the repair as to my own. Great thanks i express the
+                                project to georgia for its professionalism and approach. The repair process was turned
+                                out in terms, faster than anticipated. Team mobile and professional. Works performed
+                                qualitatively without comments. Quality satisfied. Prices democratic. i recommend these
+                                masters.</p>
+                        </div>
+                        <div class="client-parameters">
+                            <div class="client-parameters-wrap">
+                                <div class="meters">
+                                    <img class="meters-image" src="./img/meter-1.svg" alt="Метраж">
+                                    <p class="meters-text">40 m2</p>
+                                </div>
+                                <div class="days">
+                                    <img class="days-image" src="./img/days-1.svg" alt="Срок работ">
+                                    <p class="days-text" class="days-text">48 DAYS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clents-review-wrap">
+                        <div class="client-info">
+                            <div class="client-photo">
+                                <img class="photo" src="./img/image 6.2.png" alt="Фото клиента">
+                            </div>
+                            <div class="client-name">Afanasyev Sergey Alexandrovich</div>
+                        </div>
+                        <div class="client-review">
+                            <p>I want to thank the guys for their work. We put your shower part in repair. I am
+                                verygrateful that i referred to the repair as to my own. Great thanks i express the
+                                project to georgia for its professionalism and approach. The repair process was turned
+                                out in terms, faster than anticipated. Team mobile and professional. Works performed
+                                qualitatively without comments. Quality satisfied. Prices democratic. i recommend these
+                                masters.</p>
+                        </div>
+                        <div class="client-parameters">
+                            <div class="client-parameters-wrap">
+                                <div class="meters">
+                                    <img class="meters-image" src="./img/meter-1.svg" alt="Метраж">
+                                    <p class="meters-text">90 m2</p>
+                                </div>
+                                <div class="days">
+                                    <img class="days-image" src="./img/days-1.svg" alt="Срок работ">
+                                    <p class="days-text" class="days-text">128 DAYS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clents-review-wrap">
+                        <div class="client-info">
+                            <div class="client-photo">
+                                <img class="photo" src="./img/image 6.3.png" alt="Фото клиента">
+                            </div>
+                            <div class="client-name">Kiriev Egor Leonidovich</div>
+                        </div>
+                        <div class="client-review">
+                            <p>I want to thank the guys for their work. We put your shower part in repair. I am
+                                verygrateful that i referred to the repair as to my own. Great thanks i express the
+                                project to georgia for its professionalism and approach. The repair process was turned
+                                out in terms, faster than anticipated. Team mobile and professional. Works performed
+                                qualitatively without comments. Quality satisfied. Prices democratic. i recommend these
+                                masters.</p>
+                        </div>
+                        <div class="client-parameters">
+                            <div class="client-parameters-wrap">
+                                <div class="meters">
+                                    <img class="meters-image" src="./img/meter-1.svg" alt="Метраж">
+                                    <p class="meters-text">56 m2</p>
+                                </div>
+                                <div class="days">
+                                    <img class="days-image" src="./img/days-1.svg" alt="Срок работ">
+                                    <p class="days-text" class="days-text">86 DAYS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="question-form">
+            <form action="" method="POST">
+                <div class="question-form-wrap">
+                    <div class="question-form-title">HAVE ANY QUESTION?</div>
+                    <div class="question-form-input">
+                        <div class="form-input-group">
+                            <div class="group">
+                                <label class="question-label" for="name">Name</label>
+                                <input type="text" class="question-form-name" id="name" placeholder="What is your name:">
+                            </div>
+                            <div class="group">
+                                <label class="question-label" for="phone">Phone</label>
+                                <input type="text" class="question-form-phone" id="phone" placeholder="Your phone number:">
+                            </div>
+                        </div>
+                        <label class="question-label" for="question">Question</label>
+                        <input type="text" class="form-question" id="question" placeholder="I want to know:">
+                        <div class="question-form-checkbox">
+                            <input type="checkbox" class="question-checkbox" id="question-checkbox">
+                            <label for="question-checkbox" class="question-label">I agree to the processing of personal
+                                data</label>
+                        </div>
+                        <div class="question-form-button">
+                            <button class="button">SUBMIT</button>
+                        </div>
+                        <div class="question-form-overlay"></div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        
+        <section class="contacts">
+            <div class="contacts-container">
+                <div class="address-wrap">
+                    <address class="address">Rostov-on-Don, Nansen St., 239 Shopping Center Decorum Tel +7 (928) 768 32 29</address>
+                    <img class="email-social" src="./img/email.svg" alt="Электронная почта и социальные сети">
+                </div>
+                <div class="map">
+                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2708.5551262319136!2d39.72099081551865!3d47.24484722089069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b9b47a7e7029%3A0x9e8cb546a10601cc!2z0KLQpiAi0JTQtdC60L7RgNGD0Lwi!5e0!3m2!1sru!2sru!4v1582206327058!5m2!1sru!2sru" width="925" height="465" frameborder="0" style="border:0;" allowfullscreen=""></iframe> -->
+                    <img src="./img/image 7.1.png" alt="Карта">
+                </div>
+                <div class="contacts-container-overlay"></div>
+            </div>
+        </section>
 
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="container-top">
+                <div class="logo">IC "Repair Design Project"</div>
+                <nav class="navigation">
+                    <ul class="navigation-list">
+                        <li><a href="#" class="navigation-list__item home">HOME</a></li>
+                        <li><a href="#" class="navigation-list__item">PROJECTS</a></li>
+                        <li><a href="#" class="navigation-list__item">MEASUREMENT</a></li>
+                        <li><a href="#" class="navigation-list__item">TEAM</a></li>
+                        <li><a href="#" class="navigation-list__item">REVIEWS</a></li>
+                        <li><a href="#" class="navigation-list__item">CONTACTS</a></li>
+                    </ul>
+                </nav>
+                <a class="phone" href="tel:+79287683239">+7 (928) 768-32-39</a>
+                <button class="button">Request a call</button>
+            </div>
+        </div>
     </footer>
 
 </body>
