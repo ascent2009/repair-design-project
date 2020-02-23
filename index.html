@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/style.css">
+    <!-- <link rel="stylesheet" href="./CSS/style_mob.css"> -->
 </head>
 
 <body>
@@ -81,16 +82,24 @@
                                 </li>
                             </ul>
                             <div class="arrows">
-                                <a href="#"><img src="./img/vector-left.svg" alt="Предыдущий кадр"></a>
+                                <a class="arrow" href="#"><img src="./img/vector-left.svg" alt="Предыдущий кадр"></a>
                                 <div class="dot">
-                                    <a href="#"><img src="./img/dot-active.svg" alt="Активный кадр"></a>
-                                    <a href="#"><img src="./img/dot-inactive.svg" alt="Неактивный кадр"></a>
-                                    <a href="#"><img src="./img/dot-inactive.svg" alt="Неактивный кадр"></a>
+                                    <a class="dot-item" href="#"><img src="./img/dot-active.svg"
+                                            alt="Активный кадр"></a>
+                                    <a class="dot-item" href="#"><img src="./img/dot-inactive.svg"
+                                            alt="Неактивный кадр"></a>
+                                    <a class="dot-item" href="#"><img src="./img/dot-inactive.svg"
+                                            alt="Неактивный кадр"></a>
                                 </div>
-                                <a href="#"><img src="./img/vector-right.svg" alt="Следующий кадр"></a>
+                                <a class="arrow" href="#"><img src="./img/vector-right.svg" alt="Следующий кадр"></a>
                             </div>
                         </div>
-                        <div class="completed-image"><img src="./img/image 2.1.png" alt="Завершенный проект"></div>
+                        <div class="completed-image">
+                            <div class="arrow-circle-wrap">
+                                <button class="arrow-circle"></button>
+                                <button class="arrow-circle second"></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,9 +121,7 @@
                     <button class="video-arrow-circle"></button>
                     <div class="control-video-wrap-overlay"></div>
                 </div>
-
             </div>
-
             <img class="bottom-line" src="./img/Rectangle 6.9.svg" alt="Нижняя линия">
             <div class="control-review-wrap">
                 <p class="control-review">At each facility, a camera is installed that broadcasts the progress of
@@ -122,7 +129,6 @@
                     on the clock. At any time, you can go to our website and monitor the progress of work in your
                     apartment. You can watch the live broadcast from one of our facilities!<br>
                     Leave a request below and you will receive a link to the broadcast.</p>
-            </div>
             </div>
         </section>
         <section class="form">
@@ -155,7 +161,7 @@
                     </div>
                 </div>
                 <div class="types-wrap">
-                    <div class="type redecorating">
+                    <div class="type repair">
                         <img class="type-image" src="./img/redecor.jpg" alt="redecorating">
                         <div class="type-text-block">
                             <h3 class="type-subtitle">Redecorating</h3>
@@ -171,7 +177,7 @@
                             <div class="type-price">from 900 rub / m2</div>
                         </div>
                     </div>
-                    <div class="type overhaul">
+                    <div class="type repair">
                         <img class="type-image" src="./img/overhaul.jpg" alt="overhaul">
                         <div class="type-text-block">
                             <h3 class="type-subtitle">Overhaul</h3>
@@ -187,7 +193,7 @@
                             <div class="type-price">from 1800 rub / m2</div>
                         </div>
                     </div>
-                    <div class="type designer">
+                    <div class="type repair">
                         <img class="type-image" src="./img/designer.jpg" alt="designer">
                         <div class="type-text-block">
                             <h3 class="type-subtitle">Designer Repair</h3>
@@ -266,12 +272,50 @@
                 </div>
             </div>
         </section>
+
+        <section class="demo">
+            <div class="demo-container">
+                <div class="demo-wrap">
+                    <div class="demo-list-wrap">
+                        <h2 class="demo-subtitle">We realize your wildest fantasies</h2>
+                        <ul class="demo-list">
+                            <li class="demo-list__item"><a href="#" class="">American classic</a></li>
+                            <li class="demo-list__item"><a href="#" class="">Empire</a></li>
+                            <li class="demo-list__item"><a href="#" class="">Classical</a></li>
+                            <li class="demo-list__item"><a href="#" class="">Loft</a></li>
+                            <li class="demo-list__item"><a href="#" class="">Minimalism</a></li>
+                            <li class="demo-list__item"><a href="#" class="">Provence</a></li>
+                            <li class="demo-list__item"><a href="#" class="">Romanticism</a></li>
+                            <li class="demo-list__item"><a href="#" class="">Scandinavian style</a></li>
+                            <li class="demo-list__item"><a href="#" class="">Mediterranean style</a></li>
+                            <li class="demo-list__item"><a href="#" class="">High tech</a></li>
+                            <li class="demo-list__item"><a href="#" class="">Eclecticism</a></li>
+                            <div class="arrow-circle-wrap">
+                                <button class="arrow-circle"></button>
+                                <button class="arrow-circle second"></button>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="demo-wrap-overlay"></div>
+                    <div class="image-column">
+                        <div class="column-1">
+                            <img class="mobile-image" src="./img/image 5-1.png" alt="Фото 1">
+                            <img src="./img/image 5-2.png" alt="Фото 2">
+                        </div>
+                        <div class="column-2">
+                            <img src="./img/image 5-3.png" alt="Фото 3">
+                            <img src="./img/image 5-4.png" alt="Фото 4">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="clients-container">
             <div class="clients-wrap">
                 <div class="clients-subtitle-wrap">
-                    <div class="clients-subtitle">
-                        <h2>our clients</h2>
-                    </div>
+                    <div class="clients-subtitle">our clients</div>
                     <div class="clients-image-wrap">
                         <img src="./img/Rectangle 6.7.svg" alt="Левая линия">
                         <img src="./img/Group 43.svg" alt="Рукопожатие" class="tools">
@@ -378,11 +422,13 @@
                         <div class="form-input-group">
                             <div class="group">
                                 <label class="question-label" for="name">Name</label>
-                                <input type="text" class="question-form-name" id="name" placeholder="What is your name:">
+                                <input type="text" class="question-form-name" id="name"
+                                    placeholder="What is your name:">
                             </div>
                             <div class="group">
                                 <label class="question-label" for="phone">Phone</label>
-                                <input type="text" class="question-form-phone" id="phone" placeholder="Your phone number:">
+                                <input type="text" class="question-form-phone" id="phone"
+                                    placeholder="Your phone number:">
                             </div>
                         </div>
                         <label class="question-label" for="question">Question</label>
@@ -400,15 +446,21 @@
                 </div>
             </form>
         </section>
-        
+
         <section class="contacts">
             <div class="contacts-container">
+                <div class="map mobile">
+                    <img src="./img/image 7.3.png" alt="Карта">
+                    <!-- <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2708.5551262319136!2d39.72099081551865!3d47.24484722089069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b9b47a7e7029%3A0x9e8cb546a10601cc!2z0KLQpiAi0JTQtdC60L7RgNGD0Lwi!5e0!3m2!1sru!2sru!4v1582206327058!5m2!1sru!2sru"
+                        width="925" height="465" frameborder="0" style="border:0;" allowfullscreen=""></iframe> -->
+                </div>
                 <div class="address-wrap">
-                    <address class="address">Rostov-on-Don, Nansen St., 239 Shopping Center Decorum Tel +7 (928) 768 32 29</address>
+                    <address class="address">Rostov-on-Don, Nansen St., 239 Shopping Center Decorum Tel <a
+                            class="contact-phone" href="tel:+79287683239">+7 (928) 768-32-39</a></address>
                     <img class="email-social" src="./img/email.svg" alt="Электронная почта и социальные сети">
                 </div>
                 <div class="map">
-                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2708.5551262319136!2d39.72099081551865!3d47.24484722089069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b9b47a7e7029%3A0x9e8cb546a10601cc!2z0KLQpiAi0JTQtdC60L7RgNGD0Lwi!5e0!3m2!1sru!2sru!4v1582206327058!5m2!1sru!2sru" width="925" height="465" frameborder="0" style="border:0;" allowfullscreen=""></iframe> -->
                     <img src="./img/image 7.1.png" alt="Карта">
                 </div>
                 <div class="contacts-container-overlay"></div>
