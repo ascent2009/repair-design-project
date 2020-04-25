@@ -48,9 +48,9 @@
             <div class="completed-container">
                 <div class="project-list-container">
                     <ul class="project-list">
-                        <li class="project-list__item admiral"><a href="#">Rostov-on-Don, Admiral</a></li>
-                        <li class="project-list__item"><a href="#">Sochi Thieves</a></li>
-                        <li class="project-list__item"><a href="#">Rostov-on-Don Patriotic</a></li>
+                        <li><a class="project-list__item">Rostov-on-Don, Admiral</a></li>
+                        <li><a class="project-list__item">Sochi Thieves</a></li>
+                        <li><a class="project-list__item">Rostov-on-Don Patriotic</a></li>
                     </ul>
                     <div class="completed-property">
                         <div class="completed-property-wrap">
@@ -63,15 +63,15 @@
                             <ul class="property-list">
                                 <li class="property-list__item">
                                     <h3 class="item-subtitle">City:</h3>
-                                    <p class="item-text">Rostov-on-Don<br>LCD admiral</p>
+                                    <p class="item-text_city">Rostov-on-Don<br>LCD admiral</p>
                                 </li>
                                 <li class="property-list__item">
                                     <h3 class="item-subtitle">apartment area:</h3>
-                                    <p class="item-text">81 m2</p>
+                                    <p class="item-text_area">81 m2</p>
                                 </li>
                                 <li class="property-list__item">
                                     <h3 class="item-subtitle">Repair time:</h3>
-                                    <p class="item-text">3.5 months</p>
+                                    <p class="item-text_time">3.5 months</p>
                                 </li>
                                 <li class="property-list__item">
                                     <h3 class="item-subtitle">Repair Cost:</h3>
@@ -79,24 +79,18 @@
                                 </li>
                             </ul>
                             <div class="arrows">
-                                <a class="arrow" href="#"><img src="./img/vector-left.svg" alt="Предыдущий кадр"></a>
-                                <div class="dot">
-                                    <a class="dot-item" href="#"><img src="./img/dot-active.svg"
-                                            alt="Активный кадр"></a>
-                                    <a class="dot-item" href="#"><img src="./img/dot-inactive.svg"
-                                            alt="Неактивный кадр"></a>
-                                    <a class="dot-item" href="#"><img src="./img/dot-inactive.svg"
-                                            alt="Неактивный кадр"></a>
+                                <a class="arrow-prev"><img src="./img/vector-left.svg" alt="Предыдущий кадр"></a>
+                                <div class="dots">
                                 </div>
-                                <a class="arrow" href="#"><img src="./img/vector-right.svg" alt="Следующий кадр"></a>
+                                <a class="arrow-next"><img src="./img/vector-right.svg" alt="Следующий кадр"></a>
                             </div>
                         </div>
-                        <div class="completed-image">
-                            <div class="arrow-circle-wrap">
-                                <button class="arrow-circle"></button>
-                                <button class="arrow-circle second"></button>
-                            </div>
+                        <div class="arrow__circle-wrap">
+                            <a class="arrow-circle-prev"></a>
+                            <a class="arrow-circle-next"></a>
                         </div>
+                        <div class="completed__image-item-pic"></div>
+
                     </div>
                 </div>
             </div>
@@ -457,18 +451,17 @@
                         <a class="social" href="http://www.instagram.com"><img src="./img/social.svg"
                                 alt="Социальные сети"></a>
                     </div>
-
-                </div>
-                <div class="map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2708.5551262319136!2d39.72099081551865!3d47.24484722089069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b9b47a7e7029%3A0x9e8cb546a10601cc!2z0KLQpiAi0JTQtdC60L7RgNGD0Lwi!5e0!3m2!1sru!2sru!4v1582567742647!5m2!1sru!2sru"
-                        width="925" height="465" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
                 <div class="contacts-container-overlay"></div>
-
+            </div>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2708.5551262319136!2d39.72099081551865!3d47.24484722089069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b9b47a7e7029%3A0x9e8cb546a10601cc!2z0KLQpiAi0JTQtdC60L7RgNGD0Lwi!5e0!3m2!1sru!2sru!4v1582567742647!5m2!1sru!2sru"
+                    width="925" height="465" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
             </div>
         </section>
     </main>
+
     <footer class="footer">
         <div class="container">
             <div class="container-top">
@@ -488,6 +481,7 @@
             </div>
         </div>
     </footer>
+    <script src="slider.js"></script>
 </body>
 
 </html>

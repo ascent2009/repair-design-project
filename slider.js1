@@ -1,0 +1,158 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const projects = [
+    {
+      city: "Rostov-on-Don",
+      name: "Admiral",
+      descr: "Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction market we have made happy more than 1000 families",
+      area: 81,
+      time: 3.5,
+      repair: "Upon request"
+    },
+    {
+      city: "Sochi",
+      name: "Thieves",
+      descr: "Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction market we have made happy more than 1000 families",
+      area: 105,
+      time: 4,
+      repair: "Upon request"
+    },
+    {
+      city: "Rostov-on-Don",
+      name: "Patriotic",
+      descr: "Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction market we have made happy more than 1000 families",
+      area: 90,
+      time: 3,
+      repair: "Upon request"
+    }
+  ];
+
+  //dotes
+  const dotsContainer = document.querySelector('.slider-nav__dotes');
+  let dotes = [];
+  for (let i=0; i<projects.length; i++) {
+    let dot = document.createElement('button');
+    dot.classList.add('slider-nav__dot');
+    if (i === 0) {
+      dot.classList.add('slider-nav__dot_active');
+    }
+    dot.dataset.num = i;
+    dotes.push(dot);
+  }
+  dotsContainer.append(...dotes);
+
+  //projects-nav
+  const projectsNavElement = document.querySelector('.projects-nav');
+  let projectNavLi = [];
+  projects.forEach(({city, name}, index) => {
+    let li = document.createElement('li');
+    li.textContent = `${city} ${name}`;
+    li.dataset.num = index;
+    li.classList.add('title', 'projects-nav__item');
+    if (index === 0) {
+      li.classList.add('projects-nav__item_active');
+    }
+    projectNavLi.push(li);
+  })
+  projectsNavElement.append(...projectNavLi);
+
+  //actions
+  let curSlide = 0;
+  const firstSliderItem = document.querySelector('.projects__slider .slider__items').firstElementChild;
+  const projectsActionElement = document.querySelector('.slider-nav.projects__action');
+  const dotElements = document.querySelectorAll('.slider-nav__dot');
+  const navElements = document.querySelectorAll('.projects-nav__item');
+  const projectsSlider = document.querySelector('.slider.projects__slider');
+
+  projectsActionElement.addEventListener('click', e => {
+    const curElement = e.target;
+    let num = null;
+    if (curElement.classList.contains('slider-nav__dot')) {
+      num = curElement.dataset.num;
+    } else if (curElement.classList.contains('slider-nav__arrow_left')) {
+      num = curSlide - 1;
+    } else if (curElement.classList.contains('slider-nav__arrow_right')) {
+      num = curSlide + 1;
+    }
+    if (num > projects.length -1) {
+      num = 0;
+    } else if (num < 0) {
+      num = projects.length - 1;
+    }
+
+    if (num === null || curSlide === num) return;
+    changeProject(num);
+  });
+
+  projectsNavElement.addEventListener('click', e => {
+    const curElement = e.target;
+    const isActive = curElement.classList.contains('projects-nav__item_active');
+    const needClass = curElement.classList.contains('projects-nav__item');
+    if (isActive || !needClass) return;
+    changeProject(curElement.dataset.num)
+  })
+
+  projectsSlider.addEventListener('click', e => {
+    const curElement = e.target;
+    const needClass = curElement.classList.contains('slider__slide-action');
+    let num = null;
+    if (!needClass) {
+      return false;
+    }
+    if (curElement.classList.contains('slider__slide-action_left')) {
+      num = curSlide - 1;
+    } else if (curElement.classList.contains('slider__slide-action_right')) {
+      num = curSlide + 1;
+    }
+    if (num > projects.length -1) {
+      num = 0;
+    } else if (num < 0) {
+      num = projects.length - 1;
+    }
+    if (num === null) return;
+    changeProject(num);
+  })
+  
+  changeProject();
+
+  function changeProject(num = 0) {
+    console.log(num);
+    updateSlide(num);
+    updateProjectDescr(projects[num]);
+    updateDotes(num);
+    updateNav(num)
+    curSlide = +num;
+  }
+
+  function updateProjectDescr(project) {
+    const projectsTextElement = document.querySelector('.projects__text');
+    const activeProjectDescr = getActiveProjectDescr();
+    const projectsInfo = activeProjectDescr.querySelectorAll('.projects-spec__info');
+    const {city, name, descr, area, time, repair} = project;
+    
+    projectsTextElement.textContent = descr;
+    projectsInfo[0].innerHTML = `${city}<br>${name}`;
+    projectsInfo[1].textContent = `${area} m2`;
+    projectsInfo[2].textContent = `${time} month`;
+    projectsInfo[3].textContent = repair;
+  }
+  function updateSlide(num) {
+    firstSliderItem.style.marginLeft = `-${num * 100}%`;
+  }
+  
+  function updateDotes(num) {
+    dotElements.forEach(el => el.classList.remove('slider-nav__dot_active'));
+    dotElements[num].classList.add('slider-nav__dot_active');
+  }
+  function updateNav(num) {
+    navElements.forEach(el => el.classList.remove('projects-nav__item_active'));
+    navElements[num].classList.add('projects-nav__item_active');
+  }
+
+  function getActiveProjectDescr() {
+    const elements = document.querySelectorAll('.projects-spec');
+    if (window.matchMedia("screen and (max-width: 1299px)").matches) {
+      return elements[1]
+    }
+    return elements[0];
+  }
+})
