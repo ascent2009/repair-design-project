@@ -299,11 +299,16 @@ a {
     border-radius: 30px;
     width: 10px;
     height: 10px;
+    cursor: pointer;
 }
 
-.dot-item:hover,
-.dot-item:active {
+.dot-item.active {
     background: #FFFFFF;
+}
+
+.dot-item:hover {
+    background: #FFFFFF;
+    opacity: 0.7;
     transition: 0.5s;
 }
 
@@ -1400,12 +1405,8 @@ a {
         background: url("../img/Vector (Stroke).svg") no-repeat;
         width: 15px;
         height: 15px;
-    }
-
-    .arrow-circle-prev::before {
         top: 33%;
         left: 35%;
-        z-index: 1;
     }
 
     .arrow-circle-next::before {
@@ -1704,6 +1705,43 @@ a {
 
     .image-column {
         display: none;
+    }
+
+    .demo__circle-wrap {
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        height: auto;
+    }
+
+    [class*="demo-circle"] {
+        background-image: url("../img/Ellipse.svg");
+        width: 37px;
+        height: 37px;
+        border: none;
+        border-radius: 50%;
+        background-color: #E3B873;
+        box-shadow: 0px 5px 30px rgba(227, 184, 115, 0.2);
+        position: relative;
+        cursor: pointer;
+    }
+
+    [class*="demo-circle"]::before {
+        content: '';
+        position: absolute;
+        background: url("../img/Vector (Stroke).svg") no-repeat;
+        width: 15px;
+        height: 15px;
+        top: 33%;
+        left: 35%;
+    }
+
+    .demo-circle-next::before {
+        transform: rotate(180deg);
+        top: 30%;
+        left: 25%;
     }
 
     .clients-container {
